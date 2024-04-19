@@ -1,0 +1,223 @@
+@font-face {
+	font-family: "LoftygoalsRegular";
+	src: url('Fonts/LoftygoalsRegular-9Y5Xy.otf') format("opentype");
+}
+
+* {
+	font-family: "LoftygoalsRegular", Verdana, Tahoma;
+}
+
+:root {
+	--light-text-color: #ffffff;
+	/* blue */
+	--dark-text-color: #000000;
+	/* grey */
+	--highlight-color: #4fb3de;
+	/* yellow */
+	--lowlight-color: #494949;
+	/* yellow */
+	--hover-color: #4fc4de;
+
+	--accent-color: rgb(62, 197, 212);
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: var(--lowlight-color);
+	overflow: hidden;
+	border-radius: 1.5vh;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: right;
+	color: var(--light-text-color);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+
+	/*	font-size: 17px;*/
+	font-size: 3.2vh;
+}
+
+.topnav a.name {
+	float: left;
+	display: block;
+	font-size: 3.2vh;
+	/* Show the menu icon */
+}
+
+.topnav a.icon {
+	float: right;
+	display: none;
+	font-size: 3.2vh;
+	/* Show the menu icon */
+}
+
+/* Clear floats after the navigation bar */
+.topnav::after {
+	content: "";
+	clear: both;
+	display: table;
+	font-size: 3.2vh;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+	.topnav a {
+		display: none;
+		font-size: 3.2vh;
+
+		/* Hide links */
+	}
+
+	.topnav a.icon {
+		float: right;
+		display: block;
+		/* Show the menu icon */
+		font-size: 3.2vh;
+	}
+
+	.topnav.responsive {
+		position: relative;
+		font-size: 3.2vh;
+
+	}
+
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		font-size: 3.2vh;
+
+	}
+
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+		font-size: 2.2vh;
+	}
+
+	.topnav.responsive a.name {
+		float: none;
+		display: block;
+		text-align: left;
+		font-size: 3.2vh;
+	}
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: var(--hover-color);
+	color: var(--dark-text-color);
+}
+
+.topnav a.icon {
+	background-color: var(--hover-color);
+	color: var(--dark-text-color);
+	background-color: var(--highlight-color);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+	background-color: var(--highlight-color);
+	color: var(--dark-text-color);
+}
+
+body {
+	overflow-y: hidden;
+	/* Hide vertical scrollbar */
+	overflow-x: hidden;
+	/* Hide horizontal scrollbar */
+	scrollbar-width: none;
+	/* Firefox */
+	-ms-overflow-style: none;
+	/* Internet Explorer 10+ */
+}
+
+.HideScrollbar {
+	overflow: hidden;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	scrollbar-width: none;
+}
+
+.HideScrollbar::-webkit-scrollbar {
+	display: none;
+	/* Safari and Chrome */
+}
+
+.tabcontent {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+
+	display: flex;
+	justify-content: space-between;
+	user-select: none;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	height: 80vh;
+	max-width: 75.0vw;
+}
+
+.tabcontent figure {
+	display: inline-flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+	max-width: 100.0vh;
+	margin: 0;
+	font-size: 3.2vh;
+	/*padding-bottom: 3.2vh;*/
+
+	color: var(--light-text-color);
+}
+
+.tabcontent figure * {
+	width: 100%;
+}
+
+.PostBackground {
+	background-color: var(--lowlight-color);
+	border-radius: 1.5vh;
+	margin-bottom: 100px;
+	width: 100%;
+	max-width: 100.0vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.PostUnderText {
+	font-size: 2.2vh;
+	white-space: pre-wrap;
+}
+
+@keyframes FadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+html {
+	background-image: url("Images/Magma Engine v7 ImGui 1.89 WIP 16.07.2023 17_31_01.png");
+	height: 100%;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	animation: FadeIn linear 1s;
+	-webkit-animation: FadeIn linear 1s;
+	-moz-animation: FadeIn linear 1s;
+	-o-animation: FadeIn linear 1s;
+	-ms-animation: FadeIn linear 1s;
+}

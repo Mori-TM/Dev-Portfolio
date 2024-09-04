@@ -8,13 +8,13 @@
 }
 
 :root {
-	--light-text-color: #ffffff;
+	--light-text-color: #ececec;
 	/* blue */
 	--dark-text-color: #000000;
 	/* grey */
 	--highlight-color: #4fb3de;
 	/* yellow */
-	--lowlight-color: #494949;
+	--lowlight-color: #2f2f2f;
 	/* yellow */
 	--hover-color: #4fc4de;
 
@@ -190,11 +190,24 @@ body {
 	margin-right: auto;
 }
 
-
+.HeadlineClass {
+	color: var(--light-text-color);
+	font-size: 6.0vh; 
+	user-select: none; 
+	margin-bottom: 3%; 
+	margin-top: 3%;
+}
 
 .PostUnderText {
 	font-size: 2.2vh;
 	white-space: pre-wrap;
+	
+	margin: 1.25%;
+/*
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	*/
 }
 
 @keyframes FadeIn {
@@ -208,7 +221,7 @@ body {
 }
 
 html {
-	background-image: url("Images/Magma Engine v7 ImGui 1.89 WIP 16.07.2023 17_31_01.png");
+	background-image: url("ImagesComp/Magma Engine v7 ImGui 1.89 WIP 16.07.2023 17_31_01.png");
 	height: 100%;
 
 	background-position: center;

@@ -1,6 +1,7 @@
 @font-face {
 	font-family: "LoftygoalsRegular";
-	src: url('Fonts/LoftygoalsRegular-9Y5Xy.otf') format("opentype");
+	src: url('Fonts/Roboto-Light.ttf') format("truetype");
+	/*	src: url('Fonts/LoftygoalsRegular-9Y5Xy.otf') format("opentype");*/
 }
 
 * {
@@ -19,6 +20,11 @@
 	--hover-color: #4fc4de;
 
 	--accent-color: rgb(62, 197, 212);
+
+	--general-font-size: 180%;
+	--headline-font-size: min(14vw, 8vh);
+	--post-headline-font-size: 140%;
+	--text-font-size: 80%;
 }
 
 /* Add a black background color to the top navigation */
@@ -37,20 +43,20 @@
 	text-decoration: none;
 
 	/*	font-size: 17px;*/
-	font-size: 3.2vh;
+	font-size: var(--general-font-size);
 }
 
 .topnav a.name {
 	float: left;
 	display: block;
-	font-size: 3.2vh;
+	font-size: var(--general-font-size);
 	/* Show the menu icon */
 }
 
 .topnav a.icon {
 	float: right;
 	display: none;
-	font-size: 3.2vh;
+	font-size: var(--general-font-size);
 	/* Show the menu icon */
 }
 
@@ -59,15 +65,14 @@
 	content: "";
 	clear: both;
 	display: table;
-	font-size: 3.2vh;
+	font-size: var(--general-font-size);
 }
 
 /* Media query for small screens */
 @media screen and (max-width: 600px) {
 	.topnav a {
 		display: none;
-		font-size: 3.2vh;
-
+		font-size: 140%;
 		/* Hide links */
 	}
 
@@ -75,12 +80,11 @@
 		float: right;
 		display: block;
 		/* Show the menu icon */
-		font-size: 3.2vh;
+
 	}
 
 	.topnav.responsive {
 		position: relative;
-		font-size: 3.2vh;
 
 	}
 
@@ -88,7 +92,6 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		font-size: 3.2vh;
 
 	}
 
@@ -96,14 +99,15 @@
 		float: none;
 		display: block;
 		text-align: left;
-		font-size: 2.2vh;
+
+		/*2.2*/
 	}
 
 	.topnav.responsive a.name {
 		float: none;
 		display: block;
 		text-align: left;
-		font-size: 3.2vh;
+
 	}
 }
 
@@ -111,18 +115,25 @@
 .topnav a:hover {
 	background-color: var(--hover-color);
 	color: var(--dark-text-color);
+	
 }
 
 .topnav a.icon {
 	background-color: var(--hover-color);
 	color: var(--dark-text-color);
 	background-color: var(--highlight-color);
+	
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
 	background-color: var(--highlight-color);
 	color: var(--dark-text-color);
+	
+}
+
+.topnav-selectables {
+	font-size: 100%;
 }
 
 body {
@@ -160,7 +171,7 @@ body {
 	overflow-y: scroll;
 
 	height: 80vh;
-	max-width: 75.0vw;
+	max-width: 80.0vw;
 }
 
 .tabcontent figure {
@@ -170,7 +181,7 @@ body {
 	width: 100%;
 	max-width: 100.0vh;
 	margin: 0;
-	font-size: 3.2vh;
+	font-size: var(--general-font-size);
 	/*padding-bottom: 3.2vh;*/
 
 	color: var(--light-text-color);
@@ -192,18 +203,23 @@ body {
 
 .HeadlineClass {
 	color: var(--light-text-color);
-	font-size: 6.0vh; 
-	user-select: none; 
-	margin-bottom: 3%; 
-	margin-top: 3%;
+	font-size: var(--headline-font-size);
+	user-select: none;
+	margin-bottom: 2.0vh;
+	margin-top: 2.0vh;
+
+}
+
+.PostHeadline {
+	font-size: var(--post-headline-font-size);
 }
 
 .PostUnderText {
-	font-size: 2.2vh;
+	font-size: var(--text-font-size);
 	white-space: pre-wrap;
-	
+
 	margin: 1.25%;
-/*
+	/*
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-bottom: 1%;

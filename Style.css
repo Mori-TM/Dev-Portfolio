@@ -166,7 +166,7 @@ body {
 
 	display: flex;
 	justify-content: space-between;
-	user-select: none;
+/*	user-select: none;*/
 	overflow-x: hidden;
 	overflow-y: scroll;
 
@@ -204,7 +204,7 @@ body {
 .HeadlineClass {
 	color: var(--light-text-color);
 	font-size: var(--headline-font-size);
-	user-select: none;
+	
 	margin-bottom: 2.0vh;
 	margin-top: 2.0vh;
 
@@ -212,6 +212,9 @@ body {
 
 .PostHeadline {
 	font-size: var(--post-headline-font-size);
+
+
+	margin-left: 1.25%;
 }
 
 .PostUnderText {
@@ -224,6 +227,10 @@ body {
 	margin-right: 1%;
 	margin-bottom: 1%;
 	*/
+}
+
+a {
+	color: #4fb3de;
 }
 
 @keyframes FadeIn {

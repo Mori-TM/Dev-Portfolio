@@ -1,35 +1,67 @@
 {
-    "posts": [
-      {
-        "title": "Magma Engine",
-        "image": "ImagesComp/Magma Engine v7 ImGui 1.89 WIP 16.07.2023 01_38_35.png",
-        "description": "My Game Engine written in mostly C using Vulkan and as few third party libraries as possible"
-      },
-      {
-        "title": "Vulkan Tutorials",
-        "image": "ImagesComp/Vulkan 06.11.2022 20_24_54 (2).png",
-        "description": "My Vulkan tutorial continuation"
-      },
-      {
-        "title": "Software Rasterizer",
-        "image": "ImagesComp/HalfHSoftware FPS_ 113 ms_ 8.850 08.02.2024 17_32_31.png",
-        "description": "My The Legend of Zelda clone for the Nintendo DS"
-      },
-      {
-        "title": "The Legend of Zelda",
-        "image": "ImagesComp/[60_60] melonDS 0.9.5 14.01.2024 20_09_49.png",
-        "description": "My The Legend of Zelda clone for the Nintendo DS"
-      },
-      {
-        "title": "OpenVK",
-        "image": "ImagesComp/[60_60] melonDS 0.9.5 14.01.2024 20_09_49.png",
-        "description": "My graphics api wrapper"
-      },
-      {
-        "title": "Wave",
-        "image": "ImagesComp/[60_60] melonDS 0.9.5 14.01.2024 20_09_49.png",
-        "description": "Collection of single header C libararies I wrote"
-      }
-    ]
-  }
-  
+	"posts": [
+        {
+			"title": "What is Lorem Ipsum?",
+			
+			"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+			"link": "https://en.wikipedia.org/wiki/Lorem_ipsum"
+		},
+		{
+			"title": "Magma Engine",
+			"image": "ImagesComp/Magma Engine v7 ImGui 1.89 WIP 16.07.2023 01_38_35.png",
+			"description": "My Game Engine written in mostly C using Vulkan and as few third party libraries as possible",
+			"link": "https://github.com/Mori-TM/Magma-Engine"
+		},
+		{
+			"title": "Vulkan Tutorials",
+			"image": "ImagesComp/Vulkan 06.11.2022 20_24_54 (2).png",
+			"description": "My Vulkan tutorial continuation"
+		},
+		{
+			"title": "Software Rasterizer",
+			"image": "ImagesComp/HalfHSoftware FPS_ 113 ms_ 8.850 08.02.2024 17_32_31.png",
+			"description": "My The Legend of Zelda clone for the Nintendo DS"
+		},
+		{
+			"title": "The Legend of Zelda",
+			"image": "ImagesComp/[60_60] melonDS 0.9.5 14.01.2024 20_09_49.png",
+			"description": "My The Legend of Zelda clone for the Nintendo DS"
+		}
+		
+	],
+
+	"about": [
+		{
+			"title": "About the author",
+			"description": "My name is Moritz Gooth I am an 18 year old student from germany interested in software development especially in C I started my coding journey about 4 years ago during the corona panadamic and since then haven't stoped "
+		},
+		{
+			"title": "Ambitouns",
+			"list": [
+				"Dual study (Duales Studium) in Kiel",
+				"Getting Magma Engine to a Game capable state"
+
+			]
+		},
+		{
+			"title": "Technologies",
+			"description": "Used Languages/Libraries/Apis/Tools",
+			"list": [
+				"C",
+				"C++",
+				"Vulkan",
+				"Dear ImGui",
+				"SDL2/3",
+				"HTML",
+				"CSS",
+				"Java Script",
+				"Visual Studio IDE",
+				"Visual Studio Code",
+				"GitHub",
+				"Git",
+				"Windows",
+				"Linux"
+			]
+		}
+	]
+}

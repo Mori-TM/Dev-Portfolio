@@ -55,6 +55,21 @@ fetch('Posts.json')
 	})
 	.catch(error => console.error('Error fetching posts:', error));
 
+// Fetch posts data from the JSON file
+fetch('Posts.json')
+	.then(response => response.json())
+	.then(async data => {
+		const postContainer = document.getElementById('AboutTab');
+
+		// Loop through each post in the JSON data using for...of to handle one post at a time
+		for (const post of data.about) {
+			// Process each post one by one
+			await loadPost(post, postContainer);
+		}
+	})
+	.catch(error => console.error('Error fetching posts:', error));
+
+
 // Async function to load and render each post
 async function loadPost(post, postContainer) {
 	// Create the figure element
@@ -62,23 +77,59 @@ async function loadPost(post, postContainer) {
 	figure.classList.add('PostBlock');
 
 	// Create and append the figcaption for the title
-	const figcaptionTitle = document.createElement('figcaption');
-	figcaptionTitle.textContent = post.title;
-	figcaptionTitle.classList.add('PostHeadline');
-	figure.appendChild(figcaptionTitle);
+	if (post.title)
+	{
+		const figcaptionTitle = document.createElement('figcaption');
+		figcaptionTitle.textContent = post.title;
+		figcaptionTitle.classList.add('PostHeadline');
+		figure.appendChild(figcaptionTitle);
+	}
 
 	// Create and append the image element
-	const img = document.createElement('img');
-	img.setAttribute('loading', 'lazy');
-	img.src = post.image;
-	img.alt = post.title;
-	figure.appendChild(img);
+    if (post.image)
+    {
+        const img = document.createElement('img');
+		img.setAttribute('loading', 'lazy');
+		img.src = post.image;
+		img.alt = post.title;
+		figure.appendChild(img);
+    }
 
 	// Create and append the figcaption for the description
 	const figcaptionDescription = document.createElement('figcaption');
 	figcaptionDescription.classList.add('PostUnderText');
 	figcaptionDescription.textContent = post.description;
 	figure.appendChild(figcaptionDescription);
+
+	if (post.list)
+	{
+		const list = document.createElement('ul');
+		list.classList.add('PostUnderText');
+		for (const item of post.list) 
+		{
+			const li = document.createElement('li');
+		//	li.classList.add('class-name');
+			li.textContent = item;
+			list.appendChild(li);
+		}
+		
+	//	list.textContent = post.description;
+		figure.appendChild(list);
+	}
+
+	//Create and append link
+	if (post.link)
+	{
+		const link = document.createElement('a');
+		let domain = (new URL(post.link));
+
+		link.classList.add('PostUnderText');
+		link.href = post.link;
+		link.textContent = domain.hostname;
+		link.target = '_blank';
+		link.tagret = 'noopener noreferrer';
+		figure.appendChild(link);
+	}	
 
 	// Append the figure to the post container
 	const PostBackground = document.createElement('div');
@@ -203,7 +254,7 @@ function MGButton() {
 function HomeButton() {
 	ResestButtonColor();
 	ChangeToActive("home");
-	SetPageHeadline("My Projects");
+	SetPageHeadline("Posts");
 	CloseMenuBar();
 	OpenPage("HomeTab");
 }
@@ -219,7 +270,7 @@ function ContactButton() {
 function AboutButton() {
 	ResestButtonColor();
 	ChangeToActive("about");
-	SetPageHeadline("About Me");
+	SetPageHeadline("About");
 	CloseMenuBar();
 	OpenPage("AboutTab");
 }
